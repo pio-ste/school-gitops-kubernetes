@@ -9,7 +9,7 @@ spec:
     namespace: school-middleware
     server: 'https://kubernetes.default.svc'
   source:
-    path: 'kustomize/apps/school-middleware/base'
+    path: 'kustomize/apps/school-middleware/overlays'
     repoURL: 'https://github.com/pio-ste/school-gitops-kubernetes.git'
     targetRevision: HEAD
   project: default

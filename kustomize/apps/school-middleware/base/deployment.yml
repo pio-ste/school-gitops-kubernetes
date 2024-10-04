@@ -32,4 +32,7 @@ spec:
         - name: config-volume
           configMap:
             name: app-config
+            items:
+              - key: application.yml
+                path: application.yml
       restartPolicy: Always
