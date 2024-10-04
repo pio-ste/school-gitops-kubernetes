@@ -24,8 +24,4 @@ spec:
               value: -Dspring.profiles.active=kubernetes -Dspring.config.additionalLocation=file:/etc/config/
             - name: TZ
               value: Europe/Warsaw
-          volumeMounts:
-            - name: config-volume
-              mountPath: /etc/config/application-kubernetes.yml
-              subPath: application.yml
       restartPolicy: Always
