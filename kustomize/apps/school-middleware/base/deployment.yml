@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: school-middleware
-  labels:
-    app: school-middleware
 spec:
   replicas: 1
   selector:
