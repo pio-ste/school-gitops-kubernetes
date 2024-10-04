@@ -29,4 +29,3 @@ spec:
               mountPath: /etc/config/application-kubernetes.yml
               subPath: application.yml
       restartPolicy: Always
-      
