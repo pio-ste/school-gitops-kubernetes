@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     name: ''
-    namespace: default
+    namespace: school-middleware
     server: 'https://kubernetes.default.svc'
   source:
     path: 'kustomize/apps/school-middleware/base'
