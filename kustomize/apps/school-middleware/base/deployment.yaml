@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: school-middleware
+  labels:
+    app: school-middleware
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: school-middleware
+  template:
+    metadata:
+      name: school-middleware
+      labels:
+        app: school-middleware
+    spec:
+      containers:
+        - name: school-middleware
+          image: piotr97docker/school-middleware:latest
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: JAVA_TOOL_OPTIONS
+              value: -Dspring.profiles.active=kubernetes -Dspring.config.additionalLocation=file:/etc/config/
+            - name: TZ
+              value: Europe/Warsaw
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config/application-kubernetes.yml
+              subPath: application.yml
+      restartPolicy: Always
+      
