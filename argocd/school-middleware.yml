@@ -12,7 +12,7 @@ spec:
     path: 'kustomize/apps/school-middleware/base'
     repoURL: 'https://github.com/pio-ste/school-gitops-kubernetes.git'
     targetRevision: HEAD
-  project: default
+  project: school-middleware
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
